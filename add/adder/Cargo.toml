@@ -1,0 +1,10 @@
+[package]
+name = "adder"
+version = "0.1.0"
+edition = "2024"
+
+# cargo 并不假定工作区的 Crates 会相互依赖，需要明确表明工作区中 crate 的依赖关系
+[dependencies]
+add_one = {path = "../add_one"}
+add_two = {path = "../add_two"}
+rand = "0.9.0" # adder crate 使用 rand crate 需要单独添加,而不能共享 add_one 里添加的 rand 版本

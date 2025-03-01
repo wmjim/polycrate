@@ -1,0 +1,12 @@
+# 不包含 [package] 部分，以 [workspace] 开始
+[workspace]
+
+# 为工作区添加成员
+members = [
+	"adder",
+	"add_one",
+	"add_two"
+]
+
+# 使用版本 2 的解析器，以获得更好的依赖解析性能和稳定性
+resolver = "2"
